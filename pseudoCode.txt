@@ -1,0 +1,42 @@
+1. Declare variables:
+    Crystals
+        Red e.g. const $redCrystal = $(#'redCrystal');
+        Blue
+        Yellow
+        Green
+    Player Score
+    Target Score
+    Wins
+    Losses
+
+Generate random numbers at beginning of each round of the game for:
+    $redCrystal 
+    $blueCrystal
+    $yellowCrystal
+    $greenCrystal
+        Min 1, Max 12
+    $targetScore - update to DOM element
+        Min 19, Max 120
+
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+  
+Create event handlers for 4 Crystals
+e.g. $redCrystal.on('click function () { callback function  } )
+
+With each crystal click:
+    increment Player Score by value of Crystal
+    update (display) to DOM element
+Do until Player Score = or > Target Score
+    if = then Wins ++
+    if > then Losses ++
+After Win or Loss event, restart game
+
+Game reset
+    Random number generation
+    Player score set to 0
+
+
+
+
