@@ -3,6 +3,10 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+body {
+    background: url("../images/morocco-blue.png");
+}
+
 header {
     height: 80px;
     color: white;
@@ -18,7 +22,7 @@ header {
 .instructions {
     height: 320px;
     color: green;
-    background: rgba(207, 184, 155, 0.685);
+    background: rgba(207, 184, 155, 1);
     font-size: 18px;
     width: 450px;
     padding-top: 10px;
@@ -36,6 +40,7 @@ header {
     width: 160px;
     padding-left: 5px;
     margin-left: 10px;
+    margin-bottom: 0px;
 }
 
 .winsLosses {
@@ -47,21 +52,24 @@ header {
     width: 60px;
     padding-left: 5px;
     margin-left: 10px;
+    margin-bottom: 0px;
 }
 
 .crystals {
     clear: both;
-    height: 80px;
-    width: 360px;
+    height: 100px;
+    width: 500px;
     overflow: auto;
+    margin-left: 10px;
 }
 
 .crystals img {
-    height: 80px;
-    width: auto;
+    height: 100px;
+    width: 100px;
+    /* margin-top: -10px; */
 }
 
-.playerTotalScore {
+.player {
     color: white;
     background: rgb(101, 156, 101);
     width: 160px;
@@ -70,7 +78,8 @@ header {
     font-size: 12px;
 }
 
-.pTSValue {
+.playerScore {
     height: 80px;
     font-size: 20px;
+    margin-top: -10px;
 }

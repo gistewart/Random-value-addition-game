@@ -8,7 +8,7 @@
     <!-- jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Bootstrap link-->
+    <!-- Bootstrap link (but not used)-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- External stylesheet link-->
@@ -28,35 +28,67 @@
             <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
             <p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
             <p>The value of each crystal is hidden from you until you click on it.</p>
-            <p>Each time when the game starts, the game will change the values of each crystal</p>
+            <p>Each time when the game starts, the game will change the values of each crystal.</p>
         </div>
 
         <div class="targetScore">
-            <p>Target Score PH</p>
+            <p>Target Score: </p>
         </div>
 
         <div>
-            <p class="winsLosses">Wins Losses PH</p>
+            <p class="winsLosses">Wins: Losses: </p>
         </div>
 
         <div class="crystals">
-            <img src="assets/images/red.jpeg">
-            <img src="assets/images/blue.png">
-            <img src="assets/images/yellow.png">
-            <img src="assets/images/green.jpeg">
+            <img id="redBtn" class="btn" src="assets/images/red.jpeg">
+            <img class="btn" src="assets/images/blue.png">
+            <img class="btn" src="assets/images/yellow.png">
+            <img class="btn" src="assets/images/green.jpeg">
         </div>
 
         <div>
-            <p class="playerTotalScore">Your total score is:</p>
+            <p class="player">Your total score is:</p>
         </div>
 
         <div>
-            <p class="playerTotalScore pTSValue">Placeholder for Player Total Score</p>
+            <p class="player playerScore">Placeholder for Player Score</p>
         </div>
 
     </main>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
 
+            // On refresh, variables declared
+            let winCounter = 0;
+            let lossCounter = 0;
+
+            //Declare variables randomtly generated and playerScore
+            function gameRestart() {
+                let redValue = Math.floor(Math.random() * 12) + 1;
+                console.log(redValue);
+                let blueValue = Math.floor(Math.random() * 12) + 1;
+                console.log(blueValue);
+                let yellowValue = Math.floor(Math.random() * 12) + 1;
+                console.log(yellowValue);
+                let greenValue = Math.floor(Math.random() * 12) + 1;
+                console.log(greenValue);
+                let targetScore = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+                console.log(targetScore);
+                let playerScore = 0;
+            }
+
+            $("#redBtn").on("click", function() {
+                console.log('you clicked the red crystal');
+                console.log(redValue);
+                //increase playerScore by redValue
+                //if playerScore > targetScore, increment lossCounter, display targetScore, restart game
+                //if playerScore = targetScore, increment winCounter, display targetScore, restart game
+                //how to display targetScore
+                $(".targetScore").text(targetScore)
+            });
+        });
+    </script>
 
 </body>
 
