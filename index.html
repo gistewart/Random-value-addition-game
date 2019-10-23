@@ -8,12 +8,14 @@
     <!-- jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Bootstrap link (but not used)-->
+    <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- External stylesheet link-->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- External javascript link-->
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -32,63 +34,31 @@
         </div>
 
         <div class="targetScore">
-            <p>Target Score: </p>
+            <p></p>
+        </div>
+
+        <div class="winsLosses">
+            <p id="winLossMessage" class="wLP"></p>
+            <p class="wLP">Wins: <span id="winCounter"></span></p>
+            <p class="wLP">Losses: <span id="lossCounter"></span></p>
+        </div>
+
+        <div class="crystals ">
+            <img id="redBtn" class="btn " src="assets/images/red.jpeg ">
+            <img id="blueBtn" class="btn " src="assets/images/blue.png ">
+            <img id="yellowBtn" class="btn " src="assets/images/yellow.png ">
+            <img id="greenBtn" class="btn " src="assets/images/green.jpeg ">
         </div>
 
         <div>
-            <p class="winsLosses">Wins: Losses: </p>
-        </div>
-
-        <div class="crystals">
-            <img id="redBtn" class="btn" src="assets/images/red.jpeg">
-            <img class="btn" src="assets/images/blue.png">
-            <img class="btn" src="assets/images/yellow.png">
-            <img class="btn" src="assets/images/green.jpeg">
+            <p class="player ">Your total score is:</p>
         </div>
 
         <div>
-            <p class="player">Your total score is:</p>
-        </div>
-
-        <div>
-            <p class="player playerScore">Placeholder for Player Score</p>
+            <p class="player playerScore "></p>
         </div>
 
     </main>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            // On refresh, variables declared
-            let winCounter = 0;
-            let lossCounter = 0;
-
-            //Declare variables randomtly generated and playerScore
-            function gameRestart() {
-                let redValue = Math.floor(Math.random() * 12) + 1;
-                console.log(redValue);
-                let blueValue = Math.floor(Math.random() * 12) + 1;
-                console.log(blueValue);
-                let yellowValue = Math.floor(Math.random() * 12) + 1;
-                console.log(yellowValue);
-                let greenValue = Math.floor(Math.random() * 12) + 1;
-                console.log(greenValue);
-                let targetScore = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-                console.log(targetScore);
-                let playerScore = 0;
-            }
-
-            $("#redBtn").on("click", function() {
-                console.log('you clicked the red crystal');
-                console.log(redValue);
-                //increase playerScore by redValue
-                //if playerScore > targetScore, increment lossCounter, display targetScore, restart game
-                //if playerScore = targetScore, increment winCounter, display targetScore, restart game
-                //how to display targetScore
-                $(".targetScore").text(targetScore)
-            });
-        });
-    </script>
 
 </body>
 

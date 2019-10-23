@@ -8,6 +8,7 @@
     Target Score
     Wins
     Losses
+    End of each round of game
 
 Generate random numbers at beginning of each round of the game for:
     $redCrystal 
