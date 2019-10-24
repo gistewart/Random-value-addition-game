@@ -10,7 +10,7 @@ $(document).ready(function() {
     let winCounter = 0;
     let lossCounter = 0;
 
-    //generate random numbers, wrapped in a function
+    //function to run at beginning of each round of the game
     function gameRestart() {
         redValue = Math.floor(Math.random() * 12) + 1;
         console.log(redValue);
@@ -26,15 +26,15 @@ $(document).ready(function() {
         $(".playerScore").text("0");
         $("#winLossMessage").text("");
     };
-
+    //same function is run on page load
     gameRestart();
 
-    //Initialize to DOM on load
+    //initialize to DOM on page load
     $("#winLossMessage").text("");
     $("#winCounter").text("0");
     $("#lossCounter").text("0");
 
-    //comparison of playerScore and targetScore after each click and related activity
+    //comparison of playerScore and targetScore after each click 
     function scoreComparison() {
         $(".playerScore").text(playerScore);
         if (playerScore > targetScore) {
