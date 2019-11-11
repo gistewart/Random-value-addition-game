@@ -5,10 +5,10 @@ This is a game for web browsers where the user must match a target number by add
 
 ## Project Challenges
 The main challenges of this project, and the solutions used, were as follows:
-    - generate random numbers: achieved using Math.random function
-    - capture user click: achieved using jQuery on click function
-    - comparison of Player Score vs Target Score: achieved using if function
-    - display win and loss totals: achieved by using jQuery to write values to the DOM
+1. generate random numbers: achieved using Math.random function
+2. capture user click: achieved using jQuery on click function
+3. comparison of Player Score vs Target Score: achieved using if function
+4. display win and loss totals: achieved by using jQuery to write values to the DOM
 
 ## Project Usefulness
 This project demonstrates the applicaton of the jQuery library including content updates to the HTML file based on user behavior.
